@@ -28,8 +28,8 @@ class BookingsController < ApplicationController
     response = http.request(request)
     variable = response.read_body
     post = JSON.parse
-    booking = post['data']
+    itinerary = post['data']
 
-    Booking.create!(departure: booking['legs'][0]['departure'])
+    Itinerary.create!(user_id: current_user, departure: itinerary['legs'][0]['departure'])
   end
 end
