@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :maps, only: %i[index]
+  resources :bookings, only: %i[index]
 end

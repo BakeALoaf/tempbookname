@@ -47,8 +47,8 @@ Itinerary.create!(itineraries)
 # Create some sample bookings
 puts "Creating sample bookings..."
 bookings = [
-  { user_id: User.first.id, accommodation_id: Accommodation.first.id, transportation_id: Transportation.first.id, itinerary_id: Itinerary.first.id },
-  { user_id: User.last.id, accommodation_id: Accommodation.last.id, transportation_id: Transportation.last.id, itinerary_id: Itinerary.last.id }
+  { user_id: User.first.id, accommodation_id: Accommodation.first.id, transportation_id: Transportation.first.id, itinerary_id: Itinerary.first.id, start_date: Date.today, end_date: Date.today + 2.month },
+  { user_id: User.last.id, accommodation_id: Accommodation.last.id, transportation_id: Transportation.last.id, itinerary_id: Itinerary.last.id, start_date: Date.today, end_date: Date.today + 2.month }
 ]
 
 Booking.create!(bookings)
