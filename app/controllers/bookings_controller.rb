@@ -9,11 +9,11 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @booking = Booking.new
+    @booking = Itinerary.new
   end
 
   def create
-    @booking = Booking.new
+    @booking = Itinerary.new
 
     url = URI("https://skyscanner50.p.rapidapi.com/api/v1/searchFlights?origin=LOND&destination=NYCA&date=%3CREQUIRED%3E&adults=1&currency=USD&countryCode=US&market=en-US")
 
